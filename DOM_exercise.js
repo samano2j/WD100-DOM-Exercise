@@ -7,9 +7,11 @@
 */
 
 function highlightWord (word) {
-  if (word.length > 8)
+  
+  if (word.replace(/[^a-zA-Z0-9 ]/g, '').length > 8) {
     word = '<span style="background:yellow;">' + word + '</span>';
-
+  }
+  
   return word;
 }
 
